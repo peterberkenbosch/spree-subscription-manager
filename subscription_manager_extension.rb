@@ -36,7 +36,7 @@ class SubscriptionManagerExtension < Spree::Extension
     User.class_eval do
       has_many :subscriptions
       has_many :mailing_lists, :through => :subscriptions
-      attr_accessible :mailing_list
+      attr_accessible :mailing_list, :birthday, :gender, :prefer_plain_text
       
       # Use this to subscribe the user from the main form.
       def mailing_list= (val)

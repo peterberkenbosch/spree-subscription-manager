@@ -1,1 +1,1 @@
-map.resources :subscriptions
+#map.resources :subscriptions, :member => {:email_preferences => :get}

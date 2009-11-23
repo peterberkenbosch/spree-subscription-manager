@@ -1,6 +1,6 @@
 <% form_for @user do |f| %>
   <div>
-    <h3>Step 1. Tell us what type of message you would like to receive.</h3>
+    <h3><%= t :subsribe_step1_text %></h3>
     <p>
     <% @mailing_lists.each do |ml| %> 
       <%= check_box_tag "user[mailing_list][#{ml.id}]", true, current_user.mailing_lists.include?(ml), {:id => "subscriptions_#{ml.id}"} %>
@@ -10,30 +10,30 @@
     </p>
   </div>  
   <div>
-    <h3>Step 2. Let us help you celebrate your birthday with great savings!</h3>
+    <h3><%= t :subsribe_step2_text %></h3>
     <p>
-      <%= f.label :gender, "Gender:" %>
+      <%= f.label :gender, t(:gender) %>
       <%= f.select :gender,
         [
-          ["Please select a gender...", ''],        
-          ["Male", 1],
-          ["Female", 2],
-          ["Prefer not to disclose", 3]
+          [t(:select_gender), ''],        
+          [t(:male), 1],
+          [t(:female), 2],
+          [t(:prefer_not_to_disclose), 3]
         ] %>
        <br /> 
-      <%= f.label :birthday, "Birthday:" %> 
+      <%= f.label :birthday, t(:birthday) %> 
       <%= date_select :user, :birthday, 
             :discard_year => true, :include_blank => true %>
     </p>  
   </div>  
   <div>
-    <h3>Step 3. Email Format Preference. (if you've selected any emails from Step 1)</h3>
+    <h3><%= t :subsribe_step3_text %></h3>
     <p>
       <%= f.radio_button :prefer_plain_text, false %> 
-      <%= label_tag "user_prefer_plain_text_false", "Send me HTML messages (includes graphic images as well as text)" %>
+      <%= label_tag "user_prefer_plain_text_false", t(:prefer_html_emails) %>
   	  <br />
       <%= f.radio_button :prefer_plain_text, true %>
-      <%= label_tag "user_prefer_plain_text_true", "Send me Text-only emails" %>      
+      <%= label_tag "user_prefer_plain_text_true", t(:prefer_plain_text_emails) %>      
     </p>  
   </div>
   

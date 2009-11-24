@@ -21,7 +21,9 @@
         <%= mailing_list.name %>
     </td>
     <td>
-      <%= link_to t('Export Emails in CSV Format'), [:admin, mailing_list] %> |
+      <%= t('Export Emails in CSV Format') %>:
+      <%= link_to t(:prefer_plain_text), url_for([:admin, mailing_list])+'?only_plain_text=1' %>,
+      <%= link_to t(:prefer_html), [:admin, mailing_list] %> |
       <%= link_to t(:edit), [:edit, :admin, mailing_list] %> |
       <%= link_to t(:destroy), [:admin, mailing_list], :method => :delete, :confirm => t('Are you sure you want to delete this mailing_list?') %>
     </td>

@@ -13,6 +13,13 @@ class Admin::MailingListsController < Admin::BaseController
   end
   
   show.response do |wants|
-    wants.html { render :text => @mailing_list.users.collect(&:email).join(", ") }
+    wants.html do
+      subscribers = @mailing_list.users
+      subscribers_emails = params[:only_plain_text] ?
+        subscribers.find_all{|u| u.prefer_plain_text}.collect(&:email).join(", ") : 
+        subscribers.find_all{|u| !u.prefer_plain_text}.collect(&:email).join(", ")
+
+      render :text => subscribers_emails
+    end
   end
 end

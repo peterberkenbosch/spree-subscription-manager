@@ -27,6 +27,10 @@ en-US:
   male: "Male"
   female: "Female"
   prefer_not_to_disclose: "Prefer not to disclose"
-  
+  edit_subsciption_preferences: "Edit My E-mail Preferences"
+  subscribed_to: "I subscribe to"
+  email_preferences: "E-mail Preferences"
+  prefer_plain_text: "Plain Text"
+  prefer_html: "HTML"
   
   

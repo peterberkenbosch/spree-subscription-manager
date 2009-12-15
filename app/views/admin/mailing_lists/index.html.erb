@@ -1,13 +1,12 @@
-<h2>Mailing Lists</h2>
+<%= render :partial => 'admin/shared/configuration_menu' %>
+
+<h1><%= t("Listing Mailing Lists") %></h1>
 
 <p>
   <%= t('When your user goes to create an account, they will be asked if they want to subscribe to these mailing lists') %>
 </p>
 
 <%= link_to t("Add Mailing List"), new_admin_mailing_list_path -%>
-<br/><br/>
-
-<h1><%= t("Listing Mailing Lists") %></h1>
 
 <table class="admin-report">
   <tr>
@@ -30,5 +29,5 @@
   </tr>
 <% end %>
 </table>
-<br />
-<%= link_to t(:back), :controller => "admin/configurations" %>
+
+<p><%= link_to t(:back), :controller => "admin/configurations" %></p>

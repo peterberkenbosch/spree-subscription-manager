@@ -13,24 +13,6 @@ class SubscriptionManagerExtension < Spree::Extension
   end
 
   def activate
-
-    # Add a partial to get mailing list fields rendered on the user form
-    UsersController.class_eval do
-      before_filter :add_mailing_list_fields
-      def add_mailing_list_fields
-        @extension_partials << 'mailing_lists'
-      end
-    end
-    
-    # Add a link to the mailing list administration page on the configuration page
-    Admin::ConfigurationsController.class_eval do
-      before_filter :add_mailing_list_links, :only => :index
-
-      def add_mailing_list_links
-        @extension_links << {:link => admin_mailing_lists_path, :link_text => t('Mailing Lists'), :description => t("Add Mailing Lists your users can opt-in to")}
-      end
-
-    end
     
     # Add mailing list functionality to the user model
     User.class_eval do

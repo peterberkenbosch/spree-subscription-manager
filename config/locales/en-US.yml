@@ -13,6 +13,7 @@ en-US:
   "Are you sure you want to delete this mailing_list?": "Are you sure you want to delete this mailing_list?"
   "This is what user will see on registration page": "This is what user will see on registration page"
   "When your user goes to create an account, they will be asked if they want to subscribe to these mailing lists": "When your user goes to create an account, they will be asked if they want to subscribe to these mailing lists"
+  email_preferences: "Email Preferences"
   subscribed: Subscribed
   unsubscribe: Unsubscribe
   incorrect_email: "Incorrect email"

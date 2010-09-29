@@ -1,5 +1,5 @@
 <h1><%= t :email_preferences %></h1>
-
+<div id="email_preferences">
 <% form_for @user do |f| %>
   <fieldset>
     <legend><%= t :subsribe_step1_text %></legend>
@@ -43,3 +43,5 @@
 <% end %>
 
 <p><%= link_to "&larr; " + t("my_account"), user_path(current_user) %></p>
+
+</div>

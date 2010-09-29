@@ -1,6 +1,6 @@
 class SubscriptionManagerHooks < Spree::ThemeSupport::HookListener
 
-  insert_after :account_my_orders, 'users/mailing_lists'
+  insert_before :account_my_orders, 'users/mailing_lists'
   
   insert_after :admin_configurations_menu do
     %(<%= configurations_menu_item t('Mailing Lists'), admin_mailing_lists_path, t("Add Mailing Lists your users can opt-in to") %>)

@@ -1,5 +1,5 @@
 ---
-en:
+en-US:
   "Mailing Lists": Newsletter
   "Add Mailing Lists your users can opt-in to": "Add Mailing Lists your users can opt-in to"
   "Form Text": "Caption"
@@ -13,7 +13,7 @@ en:
   "Are you sure you want to delete this mailing_list?": "Are you sure you want to delete this mailing_list?"
   "This is what user will see on registration page": "This is what user will see on registration page"
   "When your user goes to create an account, they will be asked if they want to subscribe to these mailing lists": "When your user goes to create an account, they will be asked if they want to subscribe to these mailing lists"
-  email_preferences: "Email Preferences"
+  email_preferences: "Newsletter & Email Preferences"
   subscribed: Subscribed
   unsubscribe: Unsubscribe
   incorrect_email: "Incorrect email"
@@ -28,7 +28,7 @@ en:
   male: "Male"
   female: "Female"
   prefer_not_to_disclose: "Prefer not to disclose"
-  edit_subsciption_preferences: "Edit My E-mail Preferences"
+  edit_subsciption_preferences: "Edit My Newsletter & Email Preferences"
   subscribed_to: "I subscribe to"
   email_preferences: "E-mail Preferences"
   prefer_plain_text: "Plain Text"
